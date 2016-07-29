@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'Registration',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -76,8 +77,13 @@ WSGI_APPLICATION = 'ESS_Console.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME':'max_application',
+        'USER':'maxss_admin',
+        'PASSWORD':'maxadminpass',
+        'HOST':'maxdb.clawsonanalytics.com',
+        'PORT':'3306'
     }
 }
 
